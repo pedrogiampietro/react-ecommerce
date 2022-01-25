@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { CartIcon } from '../CartIcon';
 import './Header.styles.scss';
 
 export function Header() {
@@ -15,6 +16,7 @@ export function Header() {
           <Link to="/shop">Shop</Link>
         </li>
       </ul>
+      <CartIcon />
     </nav>
   );
 }
