@@ -1,11 +1,15 @@
+import { useHistory } from 'react-router-dom';
 import './FeaturedProduct.styles.scss';
 
-export function FeaturedProduct(product) {
-  const { title, price, imageUrl } = product;
+export function FeaturedProduct({ title, price, imageUrl, id }) {
+  const history = useHistory();
 
   return (
     <div className="featured-product">
-      <div className="featured-image">
+      <div
+        className="featured-image"
+        onClick={() => history.push(`/product/${id}`)}
+      >
         <img src={imageUrl} alt="Product" />
       </div>
       <div className="name-price">

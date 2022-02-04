@@ -4,11 +4,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { App } from './App';
 
 import { ProductsContextProvider } from './contexts/products-context';
+import { CartContextProvider } from './contexts/cart-context';
 
 ReactDOM.render(
   <BrowserRouter>
     <ProductsContextProvider>
-      <App />
+      <CartContextProvider>
+        <App />
+      </CartContextProvider>
     </ProductsContextProvider>
   </BrowserRouter>,
   document.getElementById('root')
